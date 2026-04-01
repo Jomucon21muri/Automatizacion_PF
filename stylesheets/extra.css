@@ -1,0 +1,697 @@
+/* ============================================================================
+   COLORES CORPORATIVOS VIU - VARIABLES RAÍZ
+   ============================================================================ */
+:root {
+  /* Colores principales VIU (naranja corporativo) */
+  --viu-orange: #F26522;
+  --viu-orange-light: #FF7F3F;
+  --viu-orange-dark: #D95518;
+  --viu-black: #1a1a1a;
+  --viu-gray: #4a4a4a;
+  --viu-gray-light: #f5f5f5;
+  
+  /* Aplicar colores corporativos */
+  --md-primary-fg-color: var(--viu-orange);
+  --md-primary-fg-color--light: var(--viu-orange-light);
+  --md-primary-fg-color--dark: var(--viu-orange-dark);
+  --md-accent-fg-color: #ff6e40;
+  
+  /* Tipografía mejorada */
+  --md-text-font-size: 1rem;
+  --md-text-line-height: 1.7;
+}
+
+/* Modo oscuro - ajustes de colores */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--viu-orange);
+  --md-primary-fg-color--light: var(--viu-orange-light);
+  --md-primary-fg-color--dark: var(--viu-orange-dark);
+}
+
+/* ============================================================================
+   LOGO Y NAVEGACIÓN
+   ============================================================================ */
+
+/* Logo en la barra de navegación - ajustado */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: auto;
+  height: 40px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Ajustar padding del logo */
+.md-header__button.md-logo {
+  padding: 0.2rem 0.4rem;
+  margin: 0;
+}
+
+/* Título del sitio junto al logo */
+.md-header__title {
+  margin-left: 0.6rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ============================================================================
+   TIPOGRAFÍA MEJORADA
+   ============================================================================ */
+
+/* Tamaño de texto general optimizado */
+.md-typeset {
+  font-size: 0.81rem;
+  line-height: 1.7;
+  color: #37474f;
+}
+
+[data-md-color-scheme="slate"] .md-typeset {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Títulos principales con tamaño normal de web */
+.md-typeset h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.md-typeset h2 {
+  font-size: 1.28rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.md-typeset h3 {
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #34495e;
+}
+
+.md-typeset h4 {
+  font-size: 0.94rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  color: #34495e;
+}
+
+/* Párrafos con mejor espaciado */
+.md-typeset p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #455a64;
+}
+
+[data-md-color-scheme="slate"] .md-typeset p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Listas con mejor espaciado y jerarquía visual */
+.md-typeset ul,
+.md-typeset ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.md-typeset li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  color: #455a64;
+}
+
+[data-md-color-scheme="slate"] .md-typeset li {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Viñetas personalizadas */
+.md-typeset ul > li::marker {
+  color: var(--viu-orange);
+}
+
+/* Listas anidadas con mejor indentación */
+.md-typeset li > ul,
+.md-typeset li > ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================================
+   BLOQUES DE CÓDIGO MEJORADOS
+   ============================================================================ */
+
+/* Código inline */
+.md-typeset code {
+  font-size: 0.9em;
+  background-color: rgba(242, 101, 34, 0.08);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  border: 1px solid rgba(242, 101, 34, 0.15);
+  font-weight: 500;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: rgba(242, 101, 34, 0.15);
+  border-color: rgba(242, 101, 34, 0.25);
+}
+
+/* Bloques de código */
+.md-typeset pre {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset pre > code {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ============================================================================
+   ADMONICIONES MEJORADAS (CAJAS DE INFORMACIÓN)
+   ============================================================================ */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  border-left: 4px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 1.5em 0;
+}
+
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: #448aff;
+}
+
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-color: #2196f3;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: #00bcd4;
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: #ff9800;
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-color: #f44336;
+}
+
+.md-typeset .admonition.example,
+.md-typeset details.example {
+  border-color: var(--viu-orange);
+}
+
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-color: #4caf50;
+}
+
+/* ============================================================================
+   TABLAS MEJORADAS
+   ============================================================================ */
+
+.md-typeset table:not([class]) {
+  display: table;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+}
+
+.md-typeset table:not([class]) thead {
+  background-color: var(--viu-orange);
+  color: white;
+}
+
+.md-typeset table:not([class]) thead th {
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.8rem 1rem;
+}
+
+/* ============================================================================
+   BOTONES Y ENLACES
+   ============================================================================ */
+
+/* Enlaces con color corporativo */
+.md-typeset a {
+  color: var(--viu-orange);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--viu-orange);
+}
+
+/* Botones */
+.md-button {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.md-button--primary {
+  background-color: var(--viu-orange);
+  border-color: var(--viu-orange);
+}
+
+.md-button--primary:hover {
+  background-color: var(--viu-orange-dark);
+  border-color: var(--viu-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(242, 101, 34, 0.3);
+}
+
+/* ============================================================================
+   NAVEGACIÓN Y SIDEBAR - DISEÑO PROFESIONAL
+   ============================================================================ */
+
+/* Eliminar márgenes del contenedor principal para aprovechar todo el ancho */
+.md-grid {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.md-main__inner {
+  margin-top: 0;
+}
+
+/* Sidebars con fondo gris claro profesional */
+.md-sidebar {
+  padding: 0;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.md-sidebar--primary {
+  left: 0 !important;
+  padding-left: 0;
+  margin-left: 0;
+  border-right: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.md-sidebar--secondary {
+  right: 0 !important;
+  padding-right: 0;
+  margin-right: 0;
+  background-color: #f8f9fa;
+  border-left: 1px solid #e0e0e0;
+}
+
+.md-sidebar__inner {
+  padding: 1.2rem 0.75rem;
+  background-color: transparent;
+}
+
+/* Navegación principal con espaciado profesional */
+.md-nav {
+  font-size: 0.69rem;
+}
+
+.md-nav--primary {
+  padding: 0;
+}
+
+.md-nav--primary > .md-nav__list {
+  padding: 0;
+}
+
+/* Enlaces de navegación con espaciado generoso */
+.md-nav__link {
+  font-size: 0.69rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0.1rem 0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+}
+
+.md-nav__link:hover {
+  background-color: rgba(242, 101, 34, 0.08);
+  color: var(--viu-orange);
+}
+
+/* Item activo con fondo destacado */
+.md-nav__link--active {
+  background-color: #fff3e0;
+  color: var(--viu-orange);
+  font-weight: 600;
+  border-left: 3px solid var(--viu-orange);
+  padding-left: calc(0.75rem - 3px);
+}
+
+/* Items expandibles/colapsables */
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+/* Sub-items con indentación */
+.md-nav--primary .md-nav__item--nested .md-nav {
+  padding-left: 0.75rem;
+}
+
+/* Iconos de expansión */
+.md-nav__icon {
+  color: #9e9e9e;
+}
+
+/* Tabla de contenidos (sidebar derecho) */
+.md-nav--secondary {
+  padding: 0;
+}
+
+.md-nav--secondary .md-nav__link {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.69rem;
+  color: #616161;
+  border-left: 2px solid transparent;
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  background-color: rgba(242, 101, 34, 0.05);
+  border-left-color: var(--viu-orange-light);
+  color: var(--viu-orange);
+}
+
+.md-nav--secondary .md-nav__link--active {
+  border-left: 3px solid var(--viu-orange);
+  background-color: rgba(242, 101, 34, 0.08);
+  color: var(--viu-orange);
+  font-weight: 600;
+  padding-left: calc(0.75rem - 3px);
+}
+
+/* Títulos de secciones en navegación */
+.md-nav__title {
+  font-weight: 700;
+  color: #2c2c2c;
+  padding: 0.7rem 0.75rem;
+  font-size: 0.69rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Scrollbar personalizado en sidebars */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 6px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e;
+}
+
+/* Contenido principal con espaciado profesional */
+.md-content {
+  padding: 2rem 3rem;
+}
+
+.md-content__inner {
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+/* Modo oscuro */
+[data-md-color-scheme="slate"] .md-sidebar {
+  background-color: #263238;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary {
+  border-right-color: #37474f;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--secondary {
+  border-left-color: #37474f;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background-color: rgba(242, 101, 34, 0.12);
+  color: var(--viu-orange-light);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  background-color: rgba(242, 101, 34, 0.18);
+  color: var(--viu-orange-light);
+}
+
+/* ============================================================================
+   BREADCRUMBS Y NAVEGACIÓN DE RUTA
+   ============================================================================ */
+
+/* Breadcrumbs estilo profesional */
+.md-path {
+  padding: 0.5rem 0 1rem 0;
+  font-size: 0.69rem;
+}
+
+.md-path__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.md-path__item {
+  color: var(--viu-orange);
+}
+
+.md-path__item::after {
+  content: "›";
+  margin: 0 0.5rem;
+  color: #9e9e9e;
+}
+
+.md-path__item:last-child::after {
+  display: none;
+}
+
+/* ============================================================================
+   ENCABEZADO DE PÁGINA
+   ============================================================================ */
+
+/* Área de encabezado superior del contenido */
+.md-content__inner > :first-child {
+  margin-top: 0.5rem;
+}
+
+/* Mejorar el espaciado del título principal */
+.md-typeset h1:first-of-type {
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ============================================================================
+   BARRA DE HERRAMIENTAS Y ACCIONES
+   ============================================================================ */
+
+/* Botón de edición y otras acciones */
+.md-content__button {
+  color: #9e9e9e;
+  transition: color 0.2s;
+}
+
+.md-content__button:hover {
+  color: var(--viu-orange);
+}
+
+/* ============================================================================
+   MEJORAS VISUALES ADICIONALES
+   ============================================================================ */
+
+/* Separador más sutil entre contenido y footer */
+.md-main {
+  background-color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-main {
+  background-color: #1e1e1e;
+}
+
+/* Sombra sutil entre header y contenido */
+.md-header {
+  box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
+}
+
+/* Listas de navegación con mejor espaciado */
+.md-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.md-nav__item {
+  padding: 0;
+}
+
+/* ============================================================================
+   CARDS Y CONTENEDORES
+   ============================================================================ */
+
+/* Estilo para grids de contenido */
+.md-typeset .grid {
+  gap: 1.5rem;
+}
+
+/* ============================================================================
+   DIAGRAMAS MERMAID
+   ============================================================================ */
+
+.mermaid {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* ============================================================================
+   RESPONSIVE - AJUSTES MÓVILES
+   ============================================================================ */
+
+@media screen and (max-width: 76.1875em) {
+  /* Logo más pequeño en móviles */
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg {
+    height: 32px;
+    max-width: 140px;
+  }
+  
+  /* Título más pequeño en móviles */
+  .md-header__title {
+    font-size: 1rem;
+  }
+  
+  /* Contenido con menos padding en móviles */
+  .md-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Sidebars en móviles */
+  .md-sidebar__inner {
+    padding: 1rem 0.75rem;
+  }
+  
+  /* Texto en móviles */
+  .md-typeset {
+    font-size: 0.9rem;
+  }
+  
+  .md-typeset h1 {
+    font-size: 1.6rem;
+  }
+  
+  .md-typeset h2 {
+    font-size: 1.35rem;
+  }
+  
+  .md-typeset h3 {
+    font-size: 1.15rem;
+  }
+  
+  /* Navegación más compacta */
+  .md-nav__link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.69rem;
+  }
+}
+
+/* ============================================================================
+   MEJORAS ADICIONALES DE USABILIDAD
+   ============================================================================ */
+
+/* Resaltar código al pasar el mouse */
+.md-typeset pre:hover {
+  box-shadow: 0 4px 16px rgba(242, 101, 34, 0.15);
+  transition: box-shadow 0.2s;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejorar contraste en modo oscuro */
+[data-md-color-scheme="slate"] .md-typeset {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Footer con color corporativo */
+.md-footer {
+  background-color: var(--viu-black);
+}
+
+.md-footer-meta {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Limitar bloques de código al ancho del contenedor */
+.md-typeset pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Tablas responsivas */
+.md-typeset table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Highlight para términos importantes */
+.md-typeset mark {
+  background-color: #fff59d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset mark {
+  background-color: #827717;
+}
+
+/* Estilos para diagramas Mermaid */
+.mermaid {
+  text-align: center;
+  margin: 1em 0;
+}
