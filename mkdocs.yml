@@ -1,0 +1,266 @@
+# ============================================================================
+# INFORMACIÓN DEL PROYECTO
+# ============================================================================
+site_name: Automatización de Procesos Financieros
+site_url: https://viu-fintech-automation.com
+site_author: Universidad Internacional de Valencia
+site_description: >-
+  Curso completo sobre automatización de procesos en el sector financiero
+  utilizando herramientas modernas como n8n, Make y Zapier, con integración
+  de APIs y análisis automatizado de datos.
+
+# ============================================================================
+# DERECHOS DE AUTOR
+# ============================================================================
+copyright: Copyright &copy; 2026 Universidad Internacional de Valencia
+
+# ============================================================================
+# CONFIGURACIÓN DEL TEMA
+# ============================================================================
+theme:
+  name: material
+  language: es
+  
+  # Logo y Favicon
+  logo: assets/images/logo_viu.webp
+  favicon: assets/images/logo_viu.webp
+  
+  # Paleta de colores corporativos VIU (naranja)
+  palette:
+    # Modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    
+    # Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  
+  # Fuentes profesionales
+  font:
+    text: Open Sans
+    code: Fira Code
+  
+  # Características activadas
+  features:
+    # Navegación
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    
+    # Búsqueda
+    - search.suggest
+    - search.highlight
+    - search.share
+    
+    # Tabla de contenidos
+    - toc.follow
+    
+    # Contenido
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - content.footnote.tooltips
+  
+  # Iconos
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/flame-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+# ============================================================================
+# PLUGINS
+# ============================================================================
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      lang: 
+        - es
+        - en
+  - glightbox:  # Visor de imágenes con zoom
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: true
+      caption_position: bottom
+
+# ============================================================================
+# EXTENSIONES DE MARKDOWN
+# ============================================================================
+markdown_extensions:
+  # Markdown básico
+  - abbr                    # Abreviaturas
+  - admonition             # Cajas de información/advertencia
+  - attr_list              # Atributos HTML
+  - def_list               # Listas de definición
+  - footnotes              # Notas al pie
+  - md_in_html             # Markdown dentro de HTML
+  - tables                 # Tablas
+  - toc:
+      permalink: true
+      permalink_title: Enlace a esta sección
+      toc_depth: 2
+  
+  # Extensiones avanzadas PyMdown
+  - pymdownx.arithmatex:        # Fórmulas matemáticas LaTeX
+      generic: true
+  - pymdownx.betterem:          # Énfasis mejorado
+      smart_enable: all
+  - pymdownx.caret              # Superíndices
+  - pymdownx.details            # Bloques colapsables
+  - pymdownx.emoji:             # Emojis
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:         # Resaltado de sintaxis
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+      auto_title: true
+      linenums: true
+  - pymdownx.inlinehilite       # Código inline resaltado
+  - pymdownx.keys               # Teclas de teclado
+  - pymdownx.mark               # Texto marcado
+  - pymdownx.smartsymbols       # Símbolos inteligentes
+  - pymdownx.snippets:          # Incluir archivos
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:       # Bloques avanzados (mermaid)
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:            # Pestañas
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:          # Listas de tareas
+      custom_checkbox: true
+  - pymdownx.tilde              # Subíndices y tachado
+
+# ============================================================================
+# RECURSOS ADICIONALES
+# ============================================================================
+
+# JavaScript adicional
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# CSS adicional
+extra_css:
+  - stylesheets/extra.css
+
+# ============================================================================
+# CONFIGURACIÓN EXTRA
+# ============================================================================
+extra:
+  # Información del generador
+  generator: false
+  
+  # Enlaces sociales con iconos mejorados
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+      name: GitHub - Recursos del Curso
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/school/universidad-internacional-de-valencia/
+      name: LinkedIn - Universidad Internacional de Valencia
+    - icon: fontawesome/solid/envelope
+      link: mailto:info@viu.es
+      name: Contacto VIU
+    - icon: fontawesome/solid/globe
+      link: https://www.universidadviu.com/
+      name: Universidad Internacional de Valencia
+  
+  # Analytics (opcional - agregar tu ID cuando esté disponible)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+  
+  # Información de consentimiento de cookies (GDPR)
+  consent:
+    title: Consentimiento de cookies
+    description: >- 
+      Utilizamos cookies para mejorar tu experiencia de navegación, personalizar 
+      contenido y analizar el tráfico del sitio. Al hacer clic en "Aceptar", 
+      consientes el uso de todas las cookies.
+    actions:
+      - accept
+      - reject
+      - manage
+  
+  # Selector de versión
+  version:
+    provider: mike
+    default: latest
+
+# ============================================================================
+# NAVEGACIÓN
+# ============================================================================
+nav:
+  - Inicio: index.md
+  
+  - Bloque 1 - Fundamentos de Python y Automatización:
+    - Sesión 1 - Introducción a la Automatización con Python: sesion1/introduccion-automatizacion.md
+    - Sesión 2 - Fundamentos de Python y Google Colab: sesion2/herramienta-n8n.md
+    - Sesión 3 - Bibliotecas Python para Finanzas: sesion3/herramienta-make.md
+    - Sesión 4 - Automatización de Tareas con Python: sesion4/herramienta-zapier.md
+  
+  - Bloque 2 - Integración con APIs Financieras:
+    - Sesión 5 - Fundamentos de APIs REST con Python: sesion5/fundamentos-apis.md
+    - Sesión 6 - APIs Financieras y Extracción de Datos: sesion6/apis-financieras.md
+    - Sesión 7 - Autenticación, Seguridad y Manejo de Errores: sesion7/autenticacion-seguridad.md
+  
+  - Bloque 3 - Diseño de Workflows Automatizados:
+    - Sesión 8 - Arquitectura de Scripts y Workflows: sesion8/arquitectura-workflows.md
+    - Sesión 9 - Workflows Financieros Avanzados: sesion9/workflows-avanzados.md
+  
+  - Bloque 4 - Automatización de Reportes y Análisis:
+    - Sesión 10 - Automatización de Reportes con pandas: sesion10/automatizacion-reportes.md
+    - Sesión 11 - Análisis Automatizado de Datos Financieros: sesion11/analisis-datos.md
+  
+  - Bloque 5 - Aplicaciones Avanzadas:
+    - Sesión 12 - IA y Machine Learning en Automatización: sesion12/ia-automatizacion.md
+    - Sesión 13 - Proyecto Integrador Final: sesion13/proyecto-final.md
+
+# ============================================================================
+# VALIDACIÓN
+# ============================================================================
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
