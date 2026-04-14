@@ -161,10 +161,16 @@ Vamos a crear un script simple que obtiene el precio actual de una acción y env
 
 ### Ejemplo 1: Obtener precio de acciones
 
+En una ejecución en local es importante descargar las librerias, a partir de tener instalado python podremos realizar el comando: 
+
 ```python
 # Instalamos la biblioteca yfinance
 !pip install yfinance
+```
 
+
+
+```python
 import yfinance as yf
 from datetime import datetime
 
@@ -270,14 +276,14 @@ def verificar_alerta_precio(ticker, precio_objetivo, tipo='mayor'):
     
     if tipo == 'mayor':
         alerta = precio_actual > precio_objetivo
-        mensaje = f"🚀 {ticker} superó ${precio_objetivo}! Precio actual: ${precio_actual}"
+        mensaje = f" {ticker} superó ${precio_objetivo}! Precio actual: ${precio_actual}"
     else:
         alerta = precio_actual < precio_objetivo
-        mensaje = f"⚠️ {ticker} bajó de ${precio_objetivo}! Precio actual: ${precio_actual}"
+        mensaje = f" {ticker} bajó de ${precio_objetivo}! Precio actual: ${precio_actual}"
     
     return {
         'alerta_activada': alerta,
-        'mensaje': mensaje if alerta else f"✅ {ticker} en rango normal: ${precio_actual}",
+        'mensaje': mensaje if alerta else f" {ticker} en rango normal: ${precio_actual}",
         'datos': datos
     }
 
@@ -345,7 +351,7 @@ graph TB
 #### 1. **Programación temporal** (Scheduling)
 
 ```python
-import schedule
+import schedule # hace falta instalación previa
 import time
 
 def tarea_diaria():
@@ -683,19 +689,7 @@ def test_obtener_precio():
 test_obtener_precio()
 ```
 
-## Google Colab: Tu entorno de desarrollo
-
-### ¿Qué es Google Colab?
-
-**Google Colab** es un entorno de Jupyter Notebook gratuito que:
-
-- ✅ Funciona 100% en la nube
-- ✅ No requiere instalación
-- ✅ Incluye bibliotecas populares preinstaladas
-- ✅ Ofrece GPU/TPU gratuito
-- ✅ Se integra con Google Drive
-
-### Ventajas para automatización financiera
+##  Ventajas para automatización financiera
 
 ```python
 # En Colab puedes:
@@ -714,20 +708,7 @@ drive.mount('/content/drive')
 # File → Share → Generar link
 ```
 
-### Primeros pasos con Colab
 
-1. Visita [colab.research.google.com](https://colab.research.google.com)
-2. `File → New Notebook`
-3. Escribe tu código Python
-4. `Ctrl+Enter` para ejecutar
-5. `File → Save` para guardar en Drive
-
-!!! tip "Atajos Útiles de Colab"
-    - `Ctrl + Enter`: Ejecutar celda
-    - `Shift + Enter`: Ejecutar y avanzar
-    - `Ctrl + M B`: Insertar celda abajo
-    - `Ctrl + M A`: Insertar celda arriba
-    - `Ctrl + M D`: Eliminar celda
 
 ## Ejercicio práctico
 
@@ -829,15 +810,13 @@ En esta sesión hemos cubierto:
 ✅ Mejores prácticas de programación  
 ✅ Introducción a Google Colab  
 
-**Próxima sesión**: Profundizaremos en **fundamentos de Python**, estructuras de datos, y Google Colab, preparándote para automatizaciones más avanzadas.
+**Próxima sesión**: Profundizaremos en **fundamentos de Python**, estructuras de datos, preparándote para automatizaciones más avanzadas.
 
 ---
 
 !!! tip "Tarea para la Próxima Sesión"
-    1. ✅ Crea una cuenta de Google (si no tienes)
-    2. ✅ Accede a [Google Colab](https://colab.research.google.com)
-    3. ✅ Crea tu primer notebook y ejecuta el código de ejemplo
-    4. ✅ Completa los 3 ejercicios prácticos
-    5. ✅ Investiga 3 bibliotecas Python financieras que te interesen
-    6. ✅ Identifica un proceso manual en tu trabajo que podrías automatizar con Python
+    1. ✅ Crea tu primer notebook y ejecuta el código de ejemplo
+    2. ✅ Completa los 3 ejercicios prácticos
+    3. ✅ Investiga 3 bibliotecas Python financieras que te interesen
+    4. ✅ Identifica un proceso manual en tu trabajo que podrías automatizar con Python
 
